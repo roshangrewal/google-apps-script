@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      
+    <?!= include("page-css"); ?>
+    
+    <title>Apps Script is Awesome!</title>
+  </head>
+  
+  
+  <body>
+    
+    <div class="container">
+    
+      <h1>
+        <?= title ?>
+      </h1>
+    
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Name" id="fn" type="text" class="validate">
+          <label for="fn">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="ln" type="text" class="validate">
+          <label for="ln">Last Name</label>
+        </div>
+      </div> <!-- Closing Row -->
+      
+      <div class="row">
+        <div class="input-field col s6">
+          <select id="app">
+            <option disabled selected>Choose Your App</option>
+            <?!= list ?>
+          </select>
+          <label>Application</label>
+        </div>
+      </div> <!-- Closing Row -->
+      
+      
+      <div class="row">
+        <button id="btn" class="waves-effect waves-light btn-large"><i class="material-icons left">chevron_right</i>Fire Script</button>
+      </div>
+      
+   
+    </div> <!-- Closing Container -->
+ 
+    
+    
+    
+    
+    <?!= include("page-js"); ?>
+    <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script> 
+      
+      <script>
+         $(document).ready(function() {
+            $('select').material_select();
+         });
+      </script>
+  </body>
+</html>
+
+
